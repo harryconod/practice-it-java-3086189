@@ -38,6 +38,9 @@ public class GradingSystem {
     // If percentage is 60 or higher, return a String that says "A retake is not
     // required."
 
+    // used isAPass method rather than direct comparison to 60 to allow easier
+    // change of pass
+    // grade in future.
     if (!isAPass(percentage) && allowedToRetake)
       return "The student has been entered for a retake.";
     else if (!isAPass(percentage) && !allowedToRetake)
